@@ -15,9 +15,9 @@
       <tbody>
         <tr v-for="juego in juegos" :key="juego.codigo">
           <td>{{ juego.codigo }}</td>
-          <td>{{ juego.nombre }}</td>
+          <td style="text-align: left">{{ juego.nombre }}</td>
           <td>{{ juego.stock }}</td>
-          <td>{{ juego.precio }}</td>
+          <td>{{ new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP" }).format(juego.precio) }}</td>
           <!-- <td>{{ juego.color }}</td> -->
           <td>
             <div class="botones">
@@ -72,9 +72,6 @@ th {
   color: black;
 }
 
-td:nth-child(4)::before {
-  content: "$";
-}
 
 td:nth-child(4) {
   text-align: right;
@@ -83,13 +80,16 @@ td:nth-child(4) {
 
 .botones {
   display: flex;
- /*  justify-content: space-between; */
  gap: 10px;
  justify-content: center;
+ align-items: center;
+ text-align: center;
 }
 
 button {
-  padding: 5px 10px;
-  border: solid 1px white;
+  width: 40px;
+  height: 40px;
+  border: solid 2px white;
+  text-align: center;
 }
 </style>
