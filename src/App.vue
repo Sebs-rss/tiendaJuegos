@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Tienda de Juegos 32 Bits</h1>
+    <h1>Tienda de Juegos 32 Bits 🎮👾</h1>
     <table>
       <thead>
         <tr>
